@@ -35,7 +35,6 @@ class Encoding(val httpMethod: Method,
                 headerPairs += "Content-Type" to "multipart/form-data; boundary=$boundary"
             }
             else -> {
-                headerPairs += "Content-Type" to "application/x-www-form-urlencoded"
                 data = queryFromParameters(parameters)
             }
         }
